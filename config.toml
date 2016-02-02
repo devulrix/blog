@@ -1,0 +1,8 @@
+baseurl = "http://uhtec.com/"
+languageCode = "en-us"
+title = "UHTec"
+
+[params]
+email = "aculrix@gmail.com"
+twitter = "https://twitter.com/DevUlrix"
+github = "https://github.com/devulrix"
