@@ -1,5 +1,75 @@
 var gulp = require('gulp');
+var csso = require('gulp-csso');
+var watch = require('gulp-watch');
+var browserSync = require('browser-sync');
+var spawn = require('child_process').spawn;
 
-gulp.task('default', function() {
-  // place code for your default task here
+// declare the folders
+var config = {
+  imagesDir: 'src-static/src-img/',
+  imagesDist: 'static/img',
+  imagesPattern: '*.{png,jpg,ico}',
+  cssDir: 'src-static/src-css/',
+  cssDist: 'static/css',
+  cssPattern: '*.css',
+  jsDir: 'src-static/src-js/',
+  jsDist: 'static/js',
+  jsPattern: '*.js'
+}
+
+// default deploy for production
+gulp.task('deploy', function() {
+  // copy images to destination
+  gulp.src(config.imagesDir + config.imagesPattern)
+    .pipe(gulp.dest(config.imagesDist))
+
+  // copy js to destination and clean up
+    gulp.src(config.jsDir + config.jsPattern)
+      .pipe(gulp.dest(config.jsDist))
+
+  // copy css to destination
+  gulp.src(config.cssDir+config.cssPattern)
+    .pipe(csso())
+    .pipe(gulp.dest(config.cssDist))
 });
+
+gulp.task('copyImages', function(){
+    // copy images to destination
+    gulp.src(config.imagesDir + config.imagesPattern)
+      .pipe(gulp.dest(config.imagesDist))
+});
+
+gulp.task('copyJS', function() {
+    // copy js to destination
+      gulp.src(config.jsDir + config.jsPattern)
+        .pipe(gulp.dest(config.jsDist))
+});
+
+gulp.task('copyCSS', function() {
+  // copy css to destination
+  gulp.src(config.cssDir+config.cssPattern)
+    .pipe(gulp.dest(config.cssDist))
+});
+
+gulp.task('hugo', function(done) {
+  // run hugo server
+  browserSync.notify('running hugo');
+ return spawn('hugo', ['server', '-v', '-D', '-F', '-b=http://localhost:1313'], {stdio: 'inherit'}).on('close', done);
+});
+
+// watch for changes in src folders and execute the dev task
+gulp.task('watch', function() {
+  gulp.watch(config.imagesDir+config.imagesPattern, ['copyImages',])
+  gulp.watch(config.jsDir+config.jsPattern, ['copyJS',])
+  gulp.watch(config.cssDir+config.cssPattern, ['copyCSS',])
+});
+
+gulp.task('browser-sync', ['hugo'], function () {
+  browserSync({
+    server : {
+      baseDir: '_site'
+    }
+  });
+});
+
+gulp.task('default', ['browser-sync', 'watch']);

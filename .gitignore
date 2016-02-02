@@ -1,2 +1,8 @@
 #ignore static folder
 static/
+
+#igonre node modules folder
+node_modules/
+
+#ignore public folder
+public/
