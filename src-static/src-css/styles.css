@@ -252,9 +252,7 @@ body .demo-blog {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.demo-blog .on-the-road-again .mdl-card__media {
-  background-image: url('img/road.jpg');
-}
+
 .demo-blog .shopping .mdl-card__media {
   background-image: url('img/shopping.jpg');
 }
@@ -511,7 +509,7 @@ body .demo-blog {
 .demo-blog .minilogo {
   width: 44px;
   height: 44px;
-  background-image: url('images/avatar.png');
+  background-image: url('/img/author.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
