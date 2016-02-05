@@ -3,7 +3,9 @@ languageCode = "en-us"
 title = "UHTec"
 
 [params]
+name = "Ulrich Hölscher"
 email = "aculrix@gmail.com"
 twitter = "https://twitter.com/DevUlrix"
 github = "https://github.com/devulrix"
-frontpageposts = 5 
+frontpageposts = 5
+copyrightyear = "2016"
