@@ -206,9 +206,6 @@ body .demo-blog {
       -ms-flex-order: -1;
           order: -1;
 }
-.demo-blog .coffee-pic .mdl-card__media {
-  background-image: url('img/coffee.jpg');
-}
 .demo-blog .something-else .mdl-card__media {
   display: -webkit-box;
   display: -webkit-flex;
@@ -251,10 +248,6 @@ body .demo-blog {
   background-color: #F5F5F5;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
-}
-
-.demo-blog .shopping .mdl-card__media {
-  background-image: url('img/shopping.jpg');
 }
 .demo-blog .demo-blog__posts > .demo-nav {
   margin: 12px 15px;
@@ -316,10 +309,6 @@ body .demo-blog {
 }
 .demo-blog--blogpost .custom-header {
   background-color: transparent;
-}
-.demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
-  background-image: url('images/road_big.jpg');
-  height: 280px;
 }
 .demo-blog--blogpost .comments {
   background-color: #EEE;
@@ -536,15 +525,6 @@ body .demo-blog {
   cursor: pointer;
   opacity: 0.46;
   border-radius: 2px;
-}
-.social-btn__twitter {
-  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png');
-}
-.social-btn__blogger {
-  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png');
-}
-.social-btn__gplus {
-  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png');
 }
 .social-btn__share {
   color: rgba(0, 0, 0, 0.54);
