@@ -2,9 +2,10 @@ baseurl = "http://uhtec.com/"
 languageCode = "en-us"
 title = "UHTec"
 googleAnalytics = "UA-73436304-1"
+disqusShortname = "UHTec"
 [params]
 name = "Ulrich Hölscher"
-email = "aculrix@gmail.com"
+email = "blog@uhtec.com"
 twitter = "https://twitter.com/DevUlrix"
 github = "https://github.com/devulrix"
 frontpageposts = 5

@@ -30,6 +30,8 @@
             {{ .Content }}
         </div>
 
+        {{ partial "disqus.html" . }}
+
 </div>
         <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
           {{ if .PrevInSection }}
