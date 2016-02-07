@@ -1,7 +1,7 @@
 baseurl = "http://uhtec.com/"
 languageCode = "en-us"
 title = "UHTec"
-
+googleAnalytics = "UA-73436304-1"
 [params]
 name = "Ulrich Hölscher"
 email = "aculrix@gmail.com"
