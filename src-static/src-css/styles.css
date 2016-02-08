@@ -233,6 +233,32 @@ body .demo-blog {
       -ms-transform: translate(0px, -28px);
           transform: translate(0px, -28px);
 }
+
+.demo-blog .about .about-media {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0px;
+}
+
+.demo-blog .about .profile-pic-container {
+  transform: translate(0px, 75px);
+}
+.demo-blog .about .profile-pic-container .profilepic {
+  width: 150px;
+  height: 150px;
+  background-image: url('/img/profile_296.jpg');
+  background-position: 50% calc(50% + 10px);
+  background-repeat: no-repeat;
+  background-size: 95%;
+  border-radius: 50%;
+  /*background-color: #F5F5F5;*/
+    background-color: #FFFFFF;
+  border-style: solid;
+  border-color: #789296;
+  border-width: 3px;
+}
+
 .demo-blog .something-else .mdl-card__media {
   font-size: 13px;
   font-weight: 500;

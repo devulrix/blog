@@ -1,0 +1,38 @@
+{{ partial "header.html" . }}
+<div class="demo-back">
+  <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/" title="go back" role="button">
+    <i class="material-icons" role="presentation">arrow_back</i>
+  </a>
+</div>
+
+<div class="demo-blog__posts mdl-grid about">
+    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__media about-media" style="{{with .Params.cardheaderimage}}background-image: url('{{.}}');{{end}} {{with .Params.cardbackground}}background-color:{{.}};{{end}}">
+          <div class="profile-pic-container" style="transform: translate(50px, 75px);">
+            <div class="profilepic" style="width: 150px;
+  height: 150px;
+  background-image: url('/img/profile_296.jpg');
+  background-position: 50% calc(50% + 10px);
+  background-repeat: no-repeat;
+  background-size: 95%;
+  border-radius: 50%;
+  /*background-color: #F5F5F5;*/
+    background-color: #FFFFFF;
+  border-style: solid;
+  border-color: #789296;
+  border-width: 3px;"></div>
+          </div>
+        </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+              <div class="minilogo"></div>
+              <div>
+                <strong>{{ .Site.Params.name }}</strong>
+                <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+              </div>
+              <div class="section-spacer"></div>
+            </div>
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+            {{ .Content }}
+        </div>
+</div>
+{{ partial "footer.html" . }}
