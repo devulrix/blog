@@ -3,10 +3,17 @@ languageCode = "en-us"
 title = "UHTec"
 googleAnalytics = "UA-73436304-1"
 disqusShortname = "UHTec"
+
+[permalinks]
+	page = "/:title/"
+	about = "/:filename/"
 [params]
-name = "Ulrich Hölscher"
-email = "blog@uhtec.com"
-twitter = "https://twitter.com/DevUlrix"
-github = "https://github.com/devulrix"
-frontpageposts = 5
-copyrightyear = "2016"
+  name = "Ulrich Hölscher"
+  description = "A place to publish my incomprehensible ramblings" #meta description
+  image = "/img/profile_296.jpg" #for frontpage profile card
+  website = "uhtec.com"
+  email = "blog@uhtec.com"
+  twitter = "https://twitter.com/DevUlrix"
+  github = "https://github.com/devulrix"
+  frontpageposts = 5
+  copyrightyear = "2016"

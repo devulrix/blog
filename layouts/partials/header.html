@@ -69,7 +69,7 @@
   </head>
   <body>
     {{ if .IsPage }}
-        {{ if (or ( eq .Type "post" ) ( eq .Type "about")) }}
+        {{ if (or ( eq .Type "post" ) ( eq .Type "project") ( eq .Type "about")) }}
             <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
         {{ else }}
             <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
@@ -77,4 +77,6 @@
     {{ else }}
         <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
     {{end}}
+
+    {{ partial "navbar.html" . }}
       <main class="mdl-layout__content">

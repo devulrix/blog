@@ -1,4 +1,4 @@
-+++
+---
 title = "Ulrich"
 description = "MySelf"
 date = "2016-02-08"
@@ -9,4 +9,4 @@ tag = ["bio"]
 photo = "/img/profile_296.jpg"
 cardheaderimage = "/img/default.jpg" #optional: default solid color if unset
 cardbackground = "#ffab40" #optional: card background color; only shows when no image specified
-+++
+---

@@ -227,7 +227,7 @@ body .demo-blog {
 }
 .demo-blog .something-else > button {
   position: absolute;
-  top: 0;
+  top: calc(100% - 65px);
   right: 28px;
   -webkit-transform: translate(0px, -28px);
       -ms-transform: translate(0px, -28px);
