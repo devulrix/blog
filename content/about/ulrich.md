@@ -1,14 +1,30 @@
-+++
-cardbackground = "#ffab40"
-cardheaderimage = "/img/default.jpg"
-categories = ["bio", "about", "meta"]
-date = "2016-02-08T19:00:31+01:00"
-description = "MySelf"
-layout = "single"
-photo = "/img/profile_296.jpg"
-tag = ["bio"]
-title = "ulrich"
-type = "about"
+---
+blurb: Just a city boy, born and raised in South Detroit
+cardbackground: '#263238'
+cardheaderimage: /images/default.jpg
+categories:
+- bio
+- about
+- meta
+date: 2016-02-29T20:15:14+01:00
+description: All About Me
+layout: single
+photo: /img/profile-140x140.jpg
+recentposts: 5
+recentprojects: 5
+tags:
+- bio
+title: ulrich
+type: about
+---
 
-+++
-This should be a short introduction
+#### Education
+>2015    MA, Wine Appreciation, University of Caledonia
+>2013    BA, Painting with Condiments, University of Caledonia
+
+#### Publications
+> Big 'ol book of condiment paintings (2015)
+> Distincive Properties of Caledonia Wine. Journal of Wine Tasting. (2015)
+
+#### Places I've worked
+>I don't work :(
