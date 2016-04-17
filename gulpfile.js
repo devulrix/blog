@@ -40,6 +40,7 @@ gulp.task('deploy', function(done) {
    spawn('hugo', [''], {stdio: 'inherit'}).on('close', done)
 
    // create ftp connection
+    var remotePath = '/';
      var connection = ftp.create({
      host: args.server,
      user: args.user,
