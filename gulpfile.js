@@ -34,9 +34,6 @@ gulp.task('build', function(done) {
     gulp.src(config.cssDir+config.cssPattern)
       .pipe(csso())
       .pipe(gulp.dest(config.cssDist))
-
-    // create hugo public deployment folder
-     spawn('hugo', [''], {stdio: 'inherit'}).on('close', done);
 });
 
 // default deploy for production

@@ -5,7 +5,9 @@ install:
 before_script:
   - gulp build
 script:
-- gulp deploy --server $UHTEC_SERVER --user $UHTEC_USER --password $UHTEC_PASS
+  - hugo
+after_script:
+  - gulp deploy --server $UHTEC_SERVER --user $UHTEC_USER --password $UHTEC_PASS
 notifications:
   emai:
     on_failure: always
