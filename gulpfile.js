@@ -3,6 +3,10 @@ var csso = require('gulp-csso');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync');
 var spawn = require('child_process').spawn;
+var ftp = require('vinyl-ftp');
+var gutil = require('gulp-util');
+var minimist = require('minimist');
+var args = minimist(process.argv.slice(2));
 
 // declare the folders
 var config = {
@@ -18,7 +22,7 @@ var config = {
 }
 
 // default deploy for production
-gulp.task('deploy', function() {
+gulp.task('deploy', function(done) {
   // copy images to destination
   gulp.src(config.imagesDir + config.imagesPattern)
     .pipe(gulp.dest(config.imagesDist))
@@ -31,6 +35,22 @@ gulp.task('deploy', function() {
   gulp.src(config.cssDir+config.cssPattern)
     .pipe(csso())
     .pipe(gulp.dest(config.cssDist))
+
+  // create hugo public deployment folder
+   spawn('hugo', [''], {stdio: 'inherit'}).on('close', done)
+
+   // create ftp connection
+     var connection = ftp.create({
+     host: args.server,
+     user: args.user,
+     password: args.password,
+     log: gutil.log
+   });
+
+   // deploy to server and update
+   gulp.src('public/**')
+   .pipe(connection.newer(remotePath))
+   .pipe(connection.dest(remotePath));
 });
 
 gulp.task('copyImages', function(){
