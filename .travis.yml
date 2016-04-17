@@ -2,8 +2,9 @@ language: go
 install:
 - go get -v github.com/spf13/hugo
 - npm install
+before_script:
+  - gulp build
 script:
-- gulp build
 - gulp deploy --server $UHTEC_SERVER --user $UHTEC_USER --password $UHTEC_PASS
 notifications:
   emai:
