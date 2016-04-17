@@ -43,13 +43,14 @@ gulp.task('build', function(done) {
 gulp.task('deploy', function() {
    // create ftp connection
     var remotePath = '/';
-     var connection = ftp.create({
+    var connection = ftp.create({
      host: args.server,
      user: args.user,
      password: args.password,
      log: gutil.log
    });
-
+   gutil.log("host: " + args.server);
+   gutil.log("user: " + args.user);
    // deploy to server and update
    gulp.src('public/**')
    .pipe(connection.newer(remotePath))
