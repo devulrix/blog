@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/devulrix/blog.svg?branch=master)](https://travis-ci.org/devulrix/blog)
 # UHTec Blog
 
 This is the repository for my personal blog [UHTec](http://uhtec.com).
