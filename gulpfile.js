@@ -21,24 +21,26 @@ var config = {
   jsPattern: '*.js'
 }
 
+gulp.task('build', function(done) {
+    // copy images to destination
+    gulp.src(config.imagesDir + config.imagesPattern)
+      .pipe(gulp.dest(config.imagesDist))
+
+    // copy js to destination and clean up
+      gulp.src(config.jsDir + config.jsPattern)
+        .pipe(gulp.dest(config.jsDist))
+
+    // copy css to destination
+    gulp.src(config.cssDir+config.cssPattern)
+      .pipe(csso())
+      .pipe(gulp.dest(config.cssDist))
+
+    // create hugo public deployment folder
+     spawn('hugo', [''], {stdio: 'inherit'}).on('close', done);
+});
+
 // default deploy for production
-gulp.task('deploy', function(done) {
-  // copy images to destination
-  gulp.src(config.imagesDir + config.imagesPattern)
-    .pipe(gulp.dest(config.imagesDist))
-
-  // copy js to destination and clean up
-    gulp.src(config.jsDir + config.jsPattern)
-      .pipe(gulp.dest(config.jsDist))
-
-  // copy css to destination
-  gulp.src(config.cssDir+config.cssPattern)
-    .pipe(csso())
-    .pipe(gulp.dest(config.cssDist))
-
-  // create hugo public deployment folder
-   spawn('hugo', [''], {stdio: 'inherit'})
-
+gulp.task('deploy', function() {
    // create ftp connection
     var remotePath = '/';
      var connection = ftp.create({
