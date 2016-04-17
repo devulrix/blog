@@ -3,7 +3,7 @@ install:
   - go get -v github.com/spf13/hugo
   - npm install
 script:
-  - gulp deploy --host $uhtec-host --user $uhtec-user --password $uhtec-info
+  - gulp deploy --host uhtec-host --user uhtec-user --password uhtec-info
 notifications:
   emai:
     on_failure: always
