@@ -37,7 +37,7 @@ gulp.task('deploy', function(done) {
     .pipe(gulp.dest(config.cssDist))
 
   // create hugo public deployment folder
-   spawn('hugo', [''], {stdio: 'inherit'}).on('close', done)
+   spawn('hugo', [''], {stdio: 'inherit'})
 
    // create ftp connection
     var remotePath = '/';
