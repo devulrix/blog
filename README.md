@@ -15,10 +15,10 @@ install npm packages
 npm install
 ```
 
-Deploy the static resources
+Build the static resources
 
 ```
-gulp deploy
+gulp build
 ```
 
 Start hugo server and watch for changes in static-src folder
