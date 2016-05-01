@@ -434,7 +434,7 @@ body .hugo-blog {
 .hugo-blog .about .profile-pic-container .profilepic {
   width: 150px;
   height: 150px;
-  background-image: url('/img/profile-140x140.png');
+  background-image: url('/img/profile-140x140.jpg');
   background-position: 50% calc(50% + 10px);
   background-repeat: no-repeat;
   background-size: 95%;
