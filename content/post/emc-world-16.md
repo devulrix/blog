@@ -21,3 +21,5 @@ tags:
 This year I'll be part of the EMC World 2016. I use this blog entry to post about my experience and what I learn. This will be an ongoing post for the next 5 days. The conference takes place in the Venetian Hotel in Las Vegas.
 
 I just completed my registration and as an EMC Proven Professional you get an additional T-Shirt and a sticker for your badge.
+
+![EMC World registration](http://uhtec.com/img/world-16-reg.jpg)
