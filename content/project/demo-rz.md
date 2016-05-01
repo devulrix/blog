@@ -57,6 +57,6 @@ As of this writing the Laptop is running OpenSUSE Leap 42.1. If you're intereste
 
 In this section I will give you a short overview of how we setup the nodes for our Docker simulations. All software versions mentioned are the ones used as of this writing. If there's a newer version. We will update the component.
 
-![DC Docker Setup](http://uhtec.com/img/dc-docker-setup.jpg)
+![DC Docker Setup](http://uhtec.com/img/dc-docker-setup.png)
 
 As described earlier, the laptop is the master node for our DC and provides all DC related services (DHCP, LDAP, ...). We run Centos 7.2 bare metal on the 3 NUCs. We build a [ScaleIO 2.0](http://emc.com/getscaleio) cluster utilizing the M.2 storage in the nodes. We run the Docker 1.11 daemon on each node. To be able to utilize the ScaleIO storage with our Docker containers we use the [Rex-Ray 0.3.3](http://rexray.readthedocs.io/en/stable/) volume driver. To build a cluster out of the 3 NUCs we run [Apache Mesos 0.28](http://mesos.apache.org/) on top of it.
