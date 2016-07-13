@@ -10,7 +10,7 @@ var args = minimist(process.argv.slice(2));
 
 // declare the folders
 var config = {
-  imagesDir: 'src-static/src-img/',
+  imagesDir: 'src-static/src-img/**/*',
   imagesDist: 'static/img',
   imagesPattern: '*.{png,jpg,ico}',
   cssDir: 'src-static/src-css/',
