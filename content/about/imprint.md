@@ -30,7 +30,7 @@ Telefon:	+49 (0) 151 64 967 868
 
 E-Mail:	blog@uhtec.com
 
-## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
+### Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
 
 Ulrich Hölscher
 
