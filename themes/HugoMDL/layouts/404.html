@@ -1,0 +1,21 @@
+<!-- List of posts -->
+{{ partial "header.html" . }}
+
+<div class="hugo-blog__list mdl-grid">
+    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+        <!-- List heading -->
+        <div class="mdl-card__media mdl-color-text--grey-50">
+            <h3>Error 404: Could not find your page</h3>
+        </div>
+
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+            Perhaps the list of all posts will help you:
+        </div>
+
+        <!-- list of posts -->
+        {{ template "theme/partials/pagination.html" . }} {{ range .Paginator.Pages }} {{ .Render "listitem" }} {{ end }}
+        {{ partial "pagination.html" . }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
