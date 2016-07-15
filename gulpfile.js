@@ -18,7 +18,9 @@ var config = {
   cssPattern: '*.css',
   jsDir: 'src-static/src-js/',
   jsDist: 'static/js',
-  jsPattern: '*.js'
+  jsPattern: '*.js',
+  confDir: 'src-static/.htaccess',
+  confDist: 'static'
 }
 
 gulp.task('build', function(done) {
@@ -34,6 +36,10 @@ gulp.task('build', function(done) {
     gulp.src(config.cssDir+config.cssPattern)
       .pipe(csso())
       .pipe(gulp.dest(config.cssDist))
+
+    // copy .htaccess
+    gulp.src(config.confDir)
+      .pipe(gulp.dest(config.confDist))
 });
 
 // default deploy for production
