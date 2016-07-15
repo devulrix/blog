@@ -58,6 +58,11 @@ gulp.task('deploy', function() {
    gulp.src('public/**')
    .pipe(connection.newer(remotePath))
    .pipe(connection.dest(remotePath));
+
+   // move .htaccess file to the server
+   gulp.src('public/.htaccess')
+   .pipe(connection.newer(remotePath))
+   .pipe(connection.dest(remotePath));
 });
 
 gulp.task('copyImages', function(){
