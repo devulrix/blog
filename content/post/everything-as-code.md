@@ -28,7 +28,7 @@ The focus of the Meetup is about everything that can be run with code. This invo
 
 Besides creating a Meetup we chose to create a [YouTube channel](https://www.youtube.com/channel/UC4d2lgIJa9FhQeVqUaFx1BQ). We use YouTube for doing our Online Meetups. We use the YouTube Live Stream function and broadcast directly from my Laptop. This gives us an easy way for everybody to consume the content (you don't need a special account). As an additional bonus, every Meetup gets recorded and can be watch at a later time. Have a look at our first online Meetup:
 
-{{< youtube ytvht7SX0YQ >}}
+{{< youtube2 ytvht7SX0YQ >}}
 
 During the Meetup you can post questions with the help of the YouTube Chat Box or you can use our Slack channel: [everything-as-code](http://www.everything-as-code.de/slack.html). We chose to create a Slack channel because we would like to create a community around the topics. With a normal Meetup it's complicated to discuss or share additional information after the Meetup, the Slack channel gives us the opportunity to chat about topics outside the normal Meetup schedule.
 
