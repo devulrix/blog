@@ -9,12 +9,9 @@
         </div>
 
         <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-            Perhaps the list of all posts will help you:
+            Something went wrong. Please use the menu to go back the main page.
         </div>
 
-        <!-- list of posts -->
-        {{ template "theme/partials/pagination.html" . }} {{ range .Paginator.Pages }} {{ .Render "listitem" }} {{ end }}
-        {{ partial "pagination.html" . }}
     </div>
 </div>
 
