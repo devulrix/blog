@@ -65,10 +65,15 @@ title = "Ulrichs Blog"
 		icon = "fa-twitter"
 		link = "https://twitter.com/DevUlrix"
 
-	[[params.github]]
+	[[params.social]]
 		title = "GitHub"
 		icon = "fa-github"
 		link = "https://github.com/devulrix"
+
+	[[params.social]]
+		title = "EaC"
+		icon = "fa-file"
+		link = "http://everything-as-code.com"
 
 	[[params.social]]
 		title = "LinkedIn"
