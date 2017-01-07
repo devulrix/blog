@@ -13,7 +13,39 @@
 		<title>{{ .Site.Title }}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" href="{{ .Site.BaseURL }}/img/{{ .Site.Params.favicon  }}" type="image/x-icon" />
+
+		<!-- Add to homescreen for Chrome on Android -->
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="/img/android-desktop.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="{{ .Title }}">
+    <!-- For iPhone 6 Plus with @3× display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/apple-touch-icon-180x180-precomposed.png">
+    <!-- For iPad with @2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152-precomposed.png">
+    <!-- For iPad with @2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144-precomposed.png">
+    <!-- For iPhone with @2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120-precomposed.png">
+    <!-- For iPhone with @2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114-precomposed.png">
+    <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76-precomposed.png">
+    <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-57x57-precomposed.png"><!-- 57×57px -->
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="/img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3F51B5">
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+
 		<link rel="apple-touch-icon-precomposed" href="{{ .Site.BaseURL }}/img/{{ .Site.Params.appletouchicon  }}" />
 		<script src="https://use.fontawesome.com/95c0d29002.js"></script>
 		<!--[if lte IE 8]><script src="{{ .Site.BaseURL }}/js/html5shiv.js"></script><![endif]-->

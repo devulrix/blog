@@ -11,7 +11,6 @@ title = "Ulrichs Blog"
 	# You may place your images in corresponding folders and then set only filenames below to
 	# change page's appearance
 
-	favicon = "favicon.ico"
 	appletouchicon = "apple-touch-icon-precomposed.png"
 	background = "bg1.jpg"
 	avatar = "profile_122.jpg"
