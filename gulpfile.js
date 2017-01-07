@@ -18,7 +18,7 @@ var config = {
   cssPattern: '*.css',
   jsDir: 'src-static/src-js/',
   jsDist: 'static/js',
-  jsPattern: '*.js',
+  jsPattern: '*.{js,htc}',
   confDir: 'src-static/.htaccess',
   confDist: 'static'
 }
