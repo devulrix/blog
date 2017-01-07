@@ -20,7 +20,9 @@ var config = {
   jsDist: 'static/js',
   jsPattern: '*.{js,htc}',
   confDir: 'src-static/.htaccess',
-  confDist: 'static'
+  confDist: 'static',
+  txtDir: 'src-static/*.txt',
+  txtDist: 'static'
 }
 
 gulp.task('build', function(done) {
@@ -40,6 +42,10 @@ gulp.task('build', function(done) {
     // copy .htaccess
     gulp.src(config.confDir)
       .pipe(gulp.dest(config.confDist))
+
+    // copy imprint & Privacy
+    gulp.src(config.txtDir)
+      .pipe(gulp.dest(config.txtDist))
 });
 
 // default deploy for production
@@ -83,6 +89,12 @@ gulp.task('copyCSS', function() {
     .pipe(gulp.dest(config.cssDist))
 });
 
+gulp.task('copyTXT', function() {
+  // copy txt to destination
+  gulp.src(config.txtDir)
+    .pipe(gulp.dest(config.txtDist))
+});
+
 gulp.task('hugo', function(done) {
   // run hugo server
   browserSync.notify('running hugo');
@@ -94,6 +106,7 @@ gulp.task('watch', function() {
   gulp.watch(config.imagesDir+config.imagesPattern, ['copyImages',])
   gulp.watch(config.jsDir+config.jsPattern, ['copyJS',])
   gulp.watch(config.cssDir+config.cssPattern, ['copyCSS',])
+  gulp.watch(config.txtDir, ['copyTXT',])
 });
 
 gulp.task('browser-sync', ['hugo'], function () {
