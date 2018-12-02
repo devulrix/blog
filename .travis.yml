@@ -1,7 +1,7 @@
 language: go
 install:
 - go get -v github.com/spf13/hugo
-- npm install gulp
+- npm install 
 before_script:
   - gulp build
 script:
