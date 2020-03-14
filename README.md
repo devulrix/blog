@@ -1,4 +1,4 @@
-[![Build Status](https://ci.uhtec.dev/api/v1/teams/main/pipelines/blog/badge)](https://travis-ci.org/devulrix/blog)
+![[CI](https://ci.uhtec.dev/api/v1/teams/main/pipelines/blog/badge)]
 # UHTec Blog
 
 This is the repository for my personal blog [UHTec](http://uhtec.com).
