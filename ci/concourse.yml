@@ -42,12 +42,17 @@ jobs:
   - get: hugo-release
     version:
       {tag: 'v0.67.0'}
-
     params:
       globs:
       - hugo_[0-9].*_Linux-64bit.tar.gz
   - task: build-hugo
     file: blog/ci/tasks/build-hugo.yml
+  - task: ftp-push
+    file: blog/ci/tasks/ftp-push.yml
+    params:
+      FTP_SERVER: ((ftp-server))
+      FTP_USERNAME: ((ftp-user))
+      FTP_PASSWORD: ((ftp-password))
   on_error:
      do:
       - put: send-an-email
@@ -60,36 +65,4 @@ jobs:
         params:
           body_text: 'Build failure in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
           subject_text: 'Build failure in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}' 
-
-- name: push to web
-  plan:
-  - get: blog
-    passed:
-    - build-blog
-    trigger: true
-  - task: ftp-push
-    file: blog/ci/tasks/ftp-push.yml
-    params:
-      FTP_SERVER: ((ftp-server))
-      FTP_USERNAME: ((ftp-user))
-      FTP_PASSWORD: ((ftp-password))
-  on_error:
-    do:
-      - put: send-an-email
-        params:
-          body_text: 'Build error in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
-          subject_text: 'Build error in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
-  on_failure:
-    do:
-      - put: send-an-email
-        params:
-          body_text: 'Build failure in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
-          subject_text: 'Build failure in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}' 
-    
-  on_success:
-    do:
-      - put: send-an-email
-        params:
-          body_text: 'Build success in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
-          subject_text: 'Build success in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
 

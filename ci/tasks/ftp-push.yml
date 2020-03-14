@@ -9,7 +9,7 @@ image_resource:
 
 inputs: 
 - name: blog
-- name: blog-deployment
+- name: build-hugo
 
 params:
     FTP_SERVER: 
