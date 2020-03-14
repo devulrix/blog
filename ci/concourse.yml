@@ -64,6 +64,8 @@ jobs:
 - name: push to web
   plan:
   - get: blog
+    passed:
+    - build-blog
     trigger: true
   - task: ftp-push
     file: blog/ci/tasks/ftp-push.yml
@@ -89,6 +91,5 @@ jobs:
       - put: send-an-email
         params:
           body_text: 'Build success in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
-          attachment_globs: ["yelb-deployment/*"]
           subject_text: 'Build success in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
 
