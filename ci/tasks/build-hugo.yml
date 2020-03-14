@@ -1,0 +1,19 @@
+---
+platform: linux
+
+image_resource: 
+  type: docker-image
+  source:
+    repository: alpine
+    tag: 'latest'
+
+inputs: 
+- name: blog
+- name: hugo-release
+
+outputs:
+- name: blog-deployment
+
+run: 
+  path: /bin/sh
+  args: ["hugo-release/hugo", "blog/"]

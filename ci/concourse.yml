@@ -1,0 +1,57 @@
+---
+resource_types:
+  - name: email
+    type: docker-image
+    source:
+      repository: pcfseceng/email-resource
+
+resources:
+  - name: blog
+    type: git
+    icon: github-circle
+    source:
+      uri: https://github.com/devulrix/blog.git
+      branch: master
+  
+  - name: hugo-release
+    type: github-release
+    source:
+      owner: gohugoio
+      repository: hugo
+      tag_filter: "hugo_*Linux-64bit.tar.gz"
+
+
+  - name: send-an-email
+    type: email
+    source: 
+      from: ((mail-from))
+      smtp: 
+        host: ((mail-host))
+        port: ((mail-port))
+        username: ((mail-user))
+        password: ((mail-password))
+      to: [ ((mail-recipient)) ]
+
+jobs:
+- name: build-blog
+  plan:
+  - get: blog
+    trigger: true
+  - get: hugo-release
+    version:
+      {tag: 'v0.67.0'}
+  - task: build-hugo
+    file: blog/ci/tasks/build-hugo.yml
+  on_error:
+     do:
+      - put: send-an-email
+        params:
+          body_text: 'Build error in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
+          subject_text: 'Build error in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
+  on_failure:
+    do:
+      - put: send-an-email
+        params:
+          body_text: 'Build failure in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}'
+          subject_text: 'Build failure in concourse: ${BUILD_PIPELINE_NAME}/${BUILD_JOB_NAME}/${BUILD_NAME}' 
+
