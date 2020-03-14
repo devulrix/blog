@@ -9,6 +9,7 @@ resources:
   - name: blog
     type: git
     icon: github-circle
+    check_every: 10m 
     source:
       uri: https://github.com/devulrix/blog.git
       branch: master
@@ -16,6 +17,7 @@ resources:
   - name: hugo-release
     type: github-release
     icon: github-circle
+    check_every: 10m 
     source:
       owner: gohugoio
       repository: hugo
@@ -42,6 +44,7 @@ jobs:
   - get: hugo-release
     version:
       {tag: 'v0.67.0'}
+
     params:
       globs:
       - hugo_*_Linux-64bit.tar.gz
