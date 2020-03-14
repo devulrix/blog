@@ -11,18 +11,18 @@ To get everything running:
 
 install npm packages
 
-```
+```bash
 npm install
 ```
 
 Build the static resources
 
-```
+```bash
 gulp build
 ```
 
 Start hugo server and watch for changes in static-src folder
 
-```
+```bash
 gulp
 ```
