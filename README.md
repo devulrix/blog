@@ -1,28 +1,6 @@
-[![Build Status](https://travis-ci.org/devulrix/blog.svg?branch=master)](https://travis-ci.org/devulrix/blog)
+[![Build Status](https://ci.uhtec.dev/api/v1/teams/main/pipelines/blog/badge)](https://travis-ci.org/devulrix/blog)
 # UHTec Blog
 
 This is the repository for my personal blog [UHTec](http://uhtec.com).
 
-The Blog uses [Hugo](https://gohugo.io/), an open source, fast & modern static site generator. I like the fact that Hugo is written in Go and focuses on speed. There are a lot of interesting features and I only barely scratched the surface of its capabilities. I'm using the [HugoMDL theme](https://github.com/jchatkinson/HugoMDL) by [Jeremy Atkinson](http://jatkinson.me/). The theme is based on Google's [Material Design Lite](https://www.getmdl.io/).
-
-I use Gulp to manage the sources and automatically build the static folder for Hugo.
-
-To get everything running:
-
-install npm packages
-
-```bash
-npm install
-```
-
-Build the static resources
-
-```bash
-gulp build
-```
-
-Start hugo server and watch for changes in static-src folder
-
-```bash
-gulp
-```
+The Blog uses [Hugo](https://gohugo.io/), an open source, fast & modern static site generator. I like the fact that Hugo is written in Go and focuses on speed. There are a lot of interesting features and I only barely scratched the surface of its capabilities. I'm using the [Hugo Identity Theme](https://github.com/aerohub/hugo-identity-theme) by [Pavel Kanyshev](https://github.com/aerohub). The theme is based on [Identity template by HTML5 UP](https://html5up.net/identity).
