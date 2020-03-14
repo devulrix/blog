@@ -21,8 +21,6 @@ resources:
     source:
       owner: gohugoio
       repository: hugo
-      #      tag_filter: "hugo_*Linux-64bit.tar.gz"
-
 
   - name: send-an-email
     type: email
