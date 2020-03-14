@@ -45,7 +45,7 @@ jobs:
 
     params:
       globs:
-      - hugo_*_Linux-64bit.tar.gz
+      - hugo_[0-9].*_Linux-64bit.tar.gz
   - task: build-hugo
     file: blog/ci/tasks/build-hugo.yml
   on_error:
