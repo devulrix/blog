@@ -15,14 +15,16 @@ resources:
   
   - name: hugo-release
     type: github-release
+    icon: github-circle
     source:
       owner: gohugoio
       repository: hugo
-      tag_filter: "hugo_*Linux-64bit.tar.gz"
+      #      tag_filter: "hugo_*Linux-64bit.tar.gz"
 
 
   - name: send-an-email
     type: email
+    icon: email
     source: 
       from: ((mail-from))
       smtp: 
@@ -40,6 +42,9 @@ jobs:
   - get: hugo-release
     version:
       {tag: 'v0.67.0'}
+    params:
+      globs:
+      - hugo_*_Linux-64bit.tar.gz
   - task: build-hugo
     file: blog/ci/tasks/build-hugo.yml
   on_error:
