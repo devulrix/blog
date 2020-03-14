@@ -3,3 +3,6 @@
 
 #ignore public folder
 public/
+
+# igonre vars file for concourse 
+vars.yaml
