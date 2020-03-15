@@ -4,4 +4,4 @@ set -ue
 
 #connect to ftp server 
 
-ls build-hugo
+ls blog-deployment
