@@ -40,7 +40,7 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     # Avatars can be written to images/avatars/
     avatar = "profile.jpg"
     position = "Senior Platform Architect"
-    livesIn = "[Munich, Germany](#some-maps-url)"
+    livesIn = "[Munich, Germany](https://goo.gl/maps/iuBnYkPo8pAqQuJB7)"
     scope = [
         "Helping people in adopting modern CI/CD",
         "Host of [Everything as code](https://www.youtube.com/channel/UC4d2lgIJa9FhQeVqUaFx1BQ)",
