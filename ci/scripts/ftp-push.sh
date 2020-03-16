@@ -6,4 +6,4 @@ set -ue
 
 ls blog-deployment
 
-lftp -e "mirror -R blog-deployment test" -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER
+lftp -c "open  -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; mirror -R blog-deployment test"
