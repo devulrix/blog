@@ -141,6 +141,22 @@ His focus is currently on K8s, CF and CI/CD toolchains in general."""
     text = "Design by"
     link = "https://html5up.net"
 
+  # Imprint 
+  [[params.imprint]]
+    # Title is used as URL text
+    title = "Imprint"
+    # Text will be used to explain the credit
+    text = "Impressum:"
+    link = "/imprint.html"
+
+    # Imprint 
+  [[params.gdpr]]
+    # Title is used as URL text
+    title = "GDPR"
+    # Text will be used to explain the credit
+    text = "DSVGO:"
+    link = "/gdpr.html"
+
   # Optional piwik tracking
   #[params.analytics.piwik]
   #  URL = "https://stats.example.com"
