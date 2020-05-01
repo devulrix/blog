@@ -40,8 +40,8 @@ jobs:
   - get: blog
     trigger: true
   - get: hugo-release
-    version:
-      {tag: 'v0.69.2'}
+    #    version:
+    #   {tag: 'v0.69.2'}
     params:
       globs:
       - hugo_[0-9].*_Linux-64bit.tar.gz
