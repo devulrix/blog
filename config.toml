@@ -42,6 +42,7 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     position = "Senior Platform Architect"
     livesIn = "[Neuss, Germany](https://goo.gl/maps/7X29qpCAo8zYSxh39)"
     scope = [
+        "Working on a Cloud Native Stack",
         "Helping people in adopting modern CI/CD",
         "Host of [Everything as code](https://www.youtube.com/channel/UC4d2lgIJa9FhQeVqUaFx1BQ)",
       ]
