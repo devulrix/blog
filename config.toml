@@ -40,7 +40,7 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     # Avatars can be written to images/avatars/
     avatar = "profile.jpg"
     position = "Senior Platform Architect"
-    livesIn = "[Neuss, Germany](https://goo.gl/maps/7X29qpCAo8zYSxh39)"
+    livesIn = "[Krefeld, Germany](https://goo.gl/maps/CFd5iV3yWEEJbPBg7)"
     scope = [
         "Working on a Cloud Native Stack",
         "Helping people in adopting modern CI/CD",
@@ -65,7 +65,7 @@ His focus is currently on K8s, CF and CI/CD toolchains in general."""
     # - click the confirm link in the email from www.formspree.io
     # - you're done. Happy mailing!
 
-    email = "ulrich.hoelscher@outlook.com"
+    email = "ulrich@uhtec.com"
 
     # It is possible to substitute formspring with other providers
     # as an example the mailout plugin from caddy.
