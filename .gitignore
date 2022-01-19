@@ -6,3 +6,6 @@ public/
 
 # igonre vars file for concourse 
 vars.yaml
+
+# hugo 
+.hugo_build.lock
