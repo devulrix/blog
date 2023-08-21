@@ -1,3 +1,6 @@
 [submodule "themes/hugo-identity-theme"]
 	path = themes/hugo-identity-theme
 	url = https://github.com/devulrix/hugo-identity-theme
+[submodule "themes/lightbi-hugo"]
+	path = themes/lightbi-hugo
+	url = https://github.com/devulrix/lightbi-hugo
