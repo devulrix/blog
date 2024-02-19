@@ -39,7 +39,7 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     name = "Ulrich Hölscher"
     # Avatars can be written to images/avatars/
     avatar = "profile.jpg"
-    position = "Senior Platform Architect"
+    position = "Lead Platform Architect"
     livesIn = "[Krefeld, Germany](https://goo.gl/maps/CFd5iV3yWEEJbPBg7)"
     scope = [
         "Working on a Cloud Native Stack",
@@ -47,7 +47,7 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
         "Host of [Everything as code](https://www.youtube.com/channel/UC4d2lgIJa9FhQeVqUaFx1BQ)",
       ]
     biography = """Ulrich is always interested in new technology. 
-He worked at EMC, Dell, Pivotal and now at VMware.  
+He worked at EMC, Dell, Pivotal, VMware and now Broadcom.  
 His focus is currently on K8s, CF and CI/CD toolchains in general."""
 
   # Contact form settings
@@ -122,6 +122,12 @@ His focus is currently on K8s, CF and CI/CD toolchains in general."""
     title = "Github"
     icon = "fa-github"
     link = "https://github.com/devulrix"
+    target = "_blank"
+
+  [[params.social]]
+    title = "Blog"
+    icon = "fa-book"
+    link = "https://everything-as-code.com"
     target = "_blank"
 
   # Footer settings
