@@ -4,7 +4,7 @@ title = "Ulrich's Blog"
 theme = "hugo-identity-theme"
 
 # Disable unnecessary kinds
-disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
+disableKinds = ["page", "section", "taxonomy", "RSS", "sitemap", "robotsTXT", "404"]
 
 [params]
 
