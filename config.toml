@@ -39,16 +39,16 @@ disableKinds = ["page", "section", "taxonomy", "RSS", "sitemap", "robotsTXT", "4
     name = "Ulrich Hölscher"
     # Avatars can be written to images/avatars/
     avatar = "profile.jpg"
-    position = "Lead Platform Architect"
+    position = "Senior Solution Architect"
     livesIn = "[Krefeld, Germany](https://goo.gl/maps/CFd5iV3yWEEJbPBg7)"
     scope = [
-        "Working on a Cloud Native Stack",
-        "Helping people in adopting modern CI/CD",
+        "Working on a Virtualization, Automation and Cloud Native Stack",
+        "Helping people in adopting modern OSS strategies.",
         "Host of [Everything as code](https://www.youtube.com/channel/UC4d2lgIJa9FhQeVqUaFx1BQ)",
       ]
     biography = """Ulrich is always interested in new technology. 
-He worked at EMC, Dell, Pivotal, VMware and now Broadcom.  
-His focus is currently on K8s, CF and CI/CD toolchains in general."""
+He worked at EMC, Dell, Pivotal, VMware, Broadcom and now Red Hat.  
+His focus is currently on financial customers. ."""
 
   # Contact form settings
 
@@ -102,31 +102,43 @@ His focus is currently on K8s, CF and CI/CD toolchains in general."""
 
   [[params.social]]
     title = "Twitter"
-    icon = "fa-twitter"
+    icon = "fa-brands fa-twitter"
     link = "https://twitter.com/DevUlrix"
     target = "_blank"
 
   [[params.social]]
+    title = "BlueSky"
+    icon = "fa-brands fa-bluesky"
+    link = "https://bsky.app/profile/everything-as-code.com"
+    target = "_blank"
+
+  [[params.social]]
+    title = "Threds"
+    icon = "fa-brands fa-threads"
+    link = "https://www.threads.net/@devulrix"
+    target = "_blank"
+
+  [[params.social]]
     title = "Linkedin"
-    icon = "fa-linkedin"
+    icon = "fa-brands fa-linkedin"
     link = "https://www.linkedin.com/in/ulrich-h%C3%B6lscher-93181061/"
     target = "_blank"
 
   [[params.social]]
     title = "Facebook"
-    icon = "fa-youtube"
+    icon = "fa-brands fa-youtube"
     link = "https://www.youtube.com/channel/UC4d2lgIJa9FhQeVqUaFx1BQ"
     target = "_blank"
 
   [[params.social]]
     title = "Github"
-    icon = "fa-github"
+    icon = "fa-brands fa-github"
     link = "https://github.com/devulrix"
     target = "_blank"
 
   [[params.social]]
     title = "Blog"
-    icon = "fa-book"
+    icon = "fa-brands fa-html5"
     link = "https://everything-as-code.com"
     target = "_blank"
 
